@@ -1,0 +1,254 @@
+run,spot,strike,call_price,risk_free_rate,time_to_expiry,runtime_seconds,exit_code,stdout,stderr
+1,116.69579050447837,85.44133744000555,15.075915160192725,0.05701003772824679,1.023919536459892,0.03458001000035438,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0330767 seconds
+We couldn't find the volatility factor used in this contract.",
+2,115.29836169757709,104.52364648739311,24.010245987323277,0.07777546979912338,1.2090540889119161,0.031678979999924195,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+The volatility factor used in this contract is 0.24
+Simulation runtime: 0.0303437 seconds",Failed to run Python plot script: Success
+3,107.45295429320534,98.20547751526975,5.014627607014983,0.06536136240057337,0.4168087449853576,0.03272404899871617,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0314526 seconds
+We couldn't find the volatility factor used in this contract.",
+4,98.62934319812945,94.85377191324038,20.337704873853962,0.04755763781236407,1.8601641948231018,0.04649003200029256,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+The volatility factor used in this contract is 0.27
+Simulation runtime: 0.0452377 seconds",Failed to run Python plot script: Success
+5,96.70292782292523,92.02692741122496,8.790021458181856,0.04292940474622882,0.7765184532754102,0.031409560000611236,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+The volatility factor used in this contract is 0.12
+Simulation runtime: 0.0301994 seconds",Failed to run Python plot script: Success
+6,113.54843025257074,117.42154276906446,14.135355237781454,0.030156284595851415,1.1296431141451164,0.04007896700022684,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0389024 seconds
+We couldn't find the volatility factor used in this contract.",
+7,87.22171958509169,91.09656581862676,23.278682237529132,0.059956779506260584,0.33539981626788595,0.04294663600012427,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0417676 seconds
+We couldn't find the volatility factor used in this contract.",
+8,96.3279778021957,101.67860344846122,5.378322299701461,0.0746304271667392,1.7294156860490668,0.03140601300037815,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0302172 seconds
+We couldn't find the volatility factor used in this contract.",
+9,92.36163628084014,84.06855776417743,22.954674466492385,0.07234525243904963,1.1791229512452157,0.04671152899936715,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+The volatility factor used in this contract is 0.39
+Simulation runtime: 0.0454761 seconds",Failed to run Python plot script: Success
+10,114.61062280746084,88.23915015795195,15.157351494091671,0.013482124128162814,1.3311425174561382,0.03298143299980438,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0318207 seconds
+We couldn't find the volatility factor used in this contract.",
+11,94.44844542899284,93.23934752465458,15.52344375519878,0.033746651881612626,0.7194325560092645,0.0418192020006245,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0403477 seconds
+We couldn't find the volatility factor used in this contract.",
+12,115.81542584684021,111.0423815554399,22.058888036151437,0.05673475381725879,0.7773718607107255,0.05703431800066028,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.044051 seconds
+We couldn't find the volatility factor used in this contract.",
+13,87.27460699388116,86.32316220496864,16.945996799564973,0.01781075556134886,0.5280873636181874,0.04317827200065949,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0419758 seconds
+We couldn't find the volatility factor used in this contract.",
+14,82.23660881291046,106.53294305952895,24.907299364648182,0.010213280858218163,0.3122931177695152,0.04276214699893899,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0415951 seconds
+We couldn't find the volatility factor used in this contract.",
+15,91.47448916746802,96.70897096426427,15.930922969381502,0.034000545508762955,0.3217684334792781,0.042347013999460614,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0411009 seconds
+We couldn't find the volatility factor used in this contract.",
+16,83.03381377367508,93.92720944572952,21.407372312628322,0.07880015050260253,0.48511055326972524,0.0427807070009294,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0415457 seconds
+We couldn't find the volatility factor used in this contract.",
+17,95.80214462447697,96.29466781131791,19.2746074310903,0.07037854398107223,1.0340363032237763,0.0416900149994035,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0404891 seconds
+We couldn't find the volatility factor used in this contract.",
+18,96.90298766364887,95.85599411067574,17.557799801052372,0.036590905316994715,1.2370625398343518,0.06975322699872777,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0685169 seconds
+We couldn't find the volatility factor used in this contract.",
+19,118.46426791892156,108.00811800171428,17.169838501836452,0.043599050681481434,0.31841844050181417,0.04162909899969236,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0404058 seconds
+We couldn't find the volatility factor used in this contract.",
+20,117.04804957585003,80.78418568758114,11.21457307663265,0.06610588083802084,0.9888452288203713,0.03186883999842394,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0306954 seconds
+We couldn't find the volatility factor used in this contract.",
+21,93.63001659937328,119.93621533073993,10.177369323412613,0.03700808244386936,0.6682980432039747,0.04297310099900642,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0417531 seconds
+We couldn't find the volatility factor used in this contract.",
+22,113.49585761274517,100.49574266810694,10.008398644972551,0.036911171839180135,1.8399585784911037,0.031427265999809606,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0302165 seconds
+We couldn't find the volatility factor used in this contract.",
+23,104.41023583689653,101.48061442642998,22.055881225449518,0.018362079570251197,1.5528775995881232,0.05161369699999341,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+The volatility factor used in this contract is 0.38
+Simulation runtime: 0.0503733 seconds",Failed to run Python plot script: Success
+24,110.64941189484453,96.4746320009605,15.581266630929688,0.03406285061780124,0.2950853523546324,0.024592267000116408,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+The volatility factor used in this contract is 0.2
+Simulation runtime: 0.0233891 seconds",Failed to run Python plot script: Success
+25,98.50662418472047,104.4731050628196,18.250755482114783,0.025323455763228277,1.836995404399103,0.06927351400008774,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0680872 seconds
+We couldn't find the volatility factor used in this contract.",
+26,90.69632456280046,105.04841969573712,11.004902306816595,0.02141673116543138,0.6029553685085384,0.04463906599994516,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0433524 seconds
+We couldn't find the volatility factor used in this contract.",
+27,84.08601021334277,107.6412906988731,23.885073962703405,0.07507774758679157,0.9682553504238631,0.0489708539989806,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+Simulation runtime: 0.0477017 seconds
+We couldn't find the volatility factor used in this contract.",
+28,96.65137723132875,103.92591796103724,6.308774228882081,0.0739330314125472,0.6892934002461746,0.03736791600022116,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+The volatility factor used in this contract is 0.23
+Simulation runtime: 0.0360722 seconds",Failed to run Python plot script: Success
+29,119.49929916260578,87.30316614522633,17.476500804003987,0.060322519909446835,0.9241231685264544,0.031508578000284615,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+We couldn't find the volatility factor used in this contract
+Simulation runtime: 0.0302748 seconds
+We couldn't find the volatility factor used in this contract.",
+30,95.40730010812054,91.50820197496371,14.195622613278845,0.061906525251999585,0.9739091028594828,0.02816196000094351,0,"Enter the contract informations in this order:
+1. Spot Price
+2. Strike Price
+3. Call Option Price
+4. Risk-Free Rate
+5. Time to expiry(in years)
+The volatility factor used in this contract is 0.25
+Simulation runtime: 0.0270449 seconds",Failed to run Python plot script: Success
+
+Successful runs,30
+Average runtime (seconds),0.04121327563322363
