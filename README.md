@@ -1,5 +1,5 @@
 # Monte Carlo Implied Volatility Estimator
-C++ program that tells you what is the implied volatility used on a European call contract.
+C++ program that tells what implied volatility factor was used on a European call contract.
 
 The program approximates the implied volatility of a European call option using Monte Carlo simulation of geometric Brownian motion (GBM) under the Black–Scholes model, implemented in C++ using the new C++26 std::philox_engine and multithreading.
 
@@ -14,6 +14,10 @@ For each candidate volatility, the program simulates the asset price at expirati
 - **Implied volatility (IV):** the premium depends on how much the asset's price is expected to move. The IV is the volatility that makes the Black–Scholes price match the premium actually quoted, but it is rarely shown to the buyer. This program estimates it from the contract's terms.
 
 **Black–Scholes** it's a model that prices a European call without trying to predict where the stock will go. It assumes money has a time value (a dollar received at expiration is worth less than a dollar today, so future amounts are discounted at the risk-free rate) and that the stock grows on average at that same risk-free rate. The price is the average payoff over all the possible price paths, discounted back to today. The only unknown input is the volatility, which is what this program solves for.
+
+## Use case
+
+You want to buy a European call option, but the quoted premium doesn't tell you what volatility is built into the price. Enter the contract's spot price, strike, premium, risk-free rate and time to expiry, and the program estimates the volatility that price implies under Black–Scholes. You can then judge whether the contract looks expensive or cheap, for example by comparing the result with how volatile the asset has actually been.
 
 # Motivation
 While studying about the "Black-Scholes" model ([**Personal study papers on "Black-Scholes" model and Monte Carlo Simulation, wrote in Romanian**](https://github.com/kantorarthur/Monte_Carlo_Black_Scholes_Study_Papers)) used in pricing European call contracts I realized that when you buy a call option, the price you pay implies a level of volatility, but that figure is rarely shown to you.
