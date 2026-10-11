@@ -1,5 +1,5 @@
 # Monte Carlo Implied Volatility Estimator
-C++ multithreaded program that estimates what implied volatility factor was used on a European call contract in about 0.037 seconds per contract.
+C++ multithreaded program that estimates what implied volatility factor was used on a European call contract in about 0.037 seconds per contract while also running millions of simulations per contract.
 
 The program approximates the implied volatility of a European call option using Monte Carlo simulation of geometric Brownian motion (GBM) under the Black–Scholes model, implemented in C++ using the new C++26 std::philox_engine and multithreading.
 
