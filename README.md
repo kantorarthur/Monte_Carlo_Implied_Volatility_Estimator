@@ -33,7 +33,7 @@ Each estimate uses 10 threads with 100,000 simulations per thread (1,000,000 pat
 
 At the end of the program a plot will show up that shows the comparations made by the program vs. the actual contract numbers.
 
-<img width="635" height="521" alt="Image" src="https://github.com/user-attachments/assets/f9d1aa55-73af-4c63-bea1-a7b34ceb1ba8" />
+<img width="635" height="521" alt="Image" src="https://github.com/user-attachments/assets/df6fd0eb-a7bd-4345-8a3c-e0838aef0d5e" />
 
 **Inputs used for this plot: Spot Price - 100, Strike Price - 100, Call Option Price - 10.45, Risk-Free Rate - 0.05, Time to expiry - 1**
 
@@ -70,7 +70,7 @@ cmake --build build --clean-first -j
 
 
 ## Build and run video demo
-[https://github.com/user-attachments/assets/05b37510-869f-443d-b010-8ec920803fb6](https://github.com/user-attachments/assets/c93a05c8-a3be-4045-983f-38ae5c952cc7)
+[https://github.com/user-attachments/assets/05b37510-869f-443d-b010-8ec920803fb6](https://github.com/user-attachments/assets/ee98fe34-5062-4345-93f7-57ebb2067516)
 
 ## Why Philox?
 
@@ -87,7 +87,7 @@ The same determinism is a strength for simulation. Because Philox is counter-bas
 The program combines three formulas to price a European call option by Monte Carlo simulation under Black–Scholes.
 
 ### 1. Simulated asset price at expiration
-<img width="1047" height="102" alt="Image" src="https://github.com/user-attachments/assets/77895cb3-77a9-4920-b134-3d2ba59b6e24" />
+<img width="1047" height="102" alt="Image" src="https://github.com/user-attachments/assets/89b72e2c-3a0e-4e21-8ae7-5cf134913d62" />
 
 This is the closed-form solution of geometric Brownian motion under risk-neutral pricing. It gives one possible price of the asset at expiration, $T$, starting from today's price $S_0$.
 
@@ -100,13 +100,13 @@ This is the closed-form solution of geometric Brownian motion under risk-neutral
 The exponent has two parts. The deterministic part, $\left(r-\tfrac{1}{2}\sigma^2\right)T$, is the drift: the asset grows at the risk-free rate, minus a $\tfrac{1}{2}\sigma^2$ correction that keeps the expected price consistent with risk-neutral pricing. The random part, $\sigma\sqrt{T}\,Z$, is the random movement, which grows with volatility and with the square root of time. Each simulation draws a fresh $Z$, so each one produces a different possible future price.
 
 ### 2. European call payoff
-<img width="728" height="155" alt="Image" src="https://github.com/user-attachments/assets/a9b20545-72f8-465b-a449-1a9529e42452" />
+<img width="728" height="155" alt="Image" src="https://github.com/user-attachments/assets/69cd42cd-c603-4705-a7a3-721ff1e551f9" />
 
 A European call gives the holder the right to buy the asset at the strike price $K$ at expiration. If $S_T > K$, exercising earns the difference $S_T-K$. If $S_T \le K$, the holder does not exercise and the payoff is zero, so it can never be negative.
 
 ### 3. Estimated call price today
 
-<img width="999" height="219" alt="Image" src="https://github.com/user-attachments/assets/c0e0b99c-baf6-4bec-aea0-0c2114298f65" />
+<img width="999" height="219" alt="Image" src="https://github.com/user-attachments/assets/f48df841-ad42-46d8-92d8-2e02677b52ff" />
 
 The inner sum adds up the payoffs of all N simulated paths, and dividing by N gives the average payoff, which estimates the expected payoff at expiration. Multiplying by $e^{-rT}$ discounts that expected future payoff back to today at the risk-free rate. The result, $C_0$ , is the model's price of the option for the chosen $\sigma$.
 
@@ -116,7 +116,7 @@ Higher volatility makes the call more valuable (the payoff is capped below at ze
 
 **(1) - Simulate function**
 
-<img width="685" height="437" alt="Image" src="https://github.com/user-attachments/assets/bc8373bf-6f05-440e-8544-433e5006a4d8" />
+<img width="685" height="437" alt="Image" src="https://github.com/user-attachments/assets/4b1b6837-2981-424d-9299-2916435743ab" />
 
 **Before the simulate function we set 3 global variables which are: Number of simulations each thread needs to do per volatility variabile check, number of threads we are using and the error tolerance factor we accept between the call option price we found and the actual call option price from the contract.**
 
@@ -132,7 +132,7 @@ Higher volatility makes the call more valuable (the payoff is capped below at ze
 
 **(2) - Actual volatility factor Loop-check**
 
-<img width="785" height="622" alt="Image" src="https://github.com/user-attachments/assets/d046453f-76c4-4081-aa9f-777f6092986e" />
+<img width="785" height="622" alt="Image" src="https://github.com/user-attachments/assets/887669e3-b1ed-490e-b79c-8be60dca9267" />
 
 1. The loop starts using an arbitrary volatility factor of 0.05 and it increases up until 0.40 if the actual volatility factor wasn't found until yet.
 
@@ -141,7 +141,8 @@ Higher volatility makes the call more valuable (the payoff is capped below at ze
 3. After each thread finished his work, we compute the average_payoff using the arithmetic median on the sum of payoffs computed by each thread.
 
 **(3) - Loop after finding the first volatility factor greater than the actual volatility factor we are looking for**
-<img width="620" height="830" alt="Image" src="https://github.com/user-attachments/assets/8880200d-319e-49e3-a080-f23beb2e23d6" />
+
+<img width="617" height="824" alt="Image" src="https://github.com/user-attachments/assets/cbc3cc79-f233-45f2-9479-7d3999ac79c9" />
 
 Once we find the first volatility factor greater than the actual volatility factor of the contract, we first check if that's the actual volatility factor we are looking for.
 
