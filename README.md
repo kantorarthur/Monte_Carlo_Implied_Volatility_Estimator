@@ -70,7 +70,7 @@ cmake --build build --clean-first -j
 
 
 ## Build and run video demo
-[https://github.com/user-attachments/assets/05b37510-869f-443d-b010-8ec920803fb6](https://github.com/user-attachments/assets/ee98fe34-5062-4345-93f7-57ebb2067516)
+https://github.com/user-attachments/assets/cf199ccc-7e26-4770-a8f5-e2d985475466
 
 ## Why Philox?
 
