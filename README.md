@@ -11,18 +11,18 @@ For each candidate volatility, the program simulates the asset price at expirati
 - If the asset's price at expiration is **above** the strike, the buyer exercises and earns the difference.
 - If it is **below**, the buyer lets the option expire and loses only the price paid for the contract (the *premium*).
 
-- **Implied volatility (IV):** the premium depends on how much the asset's price is expected to move. The IV is the volatility that makes the Black–Scholes price match the premium actually quoted, but it is rarely shown to the buyer. This program estimates it from the contract's terms.
+- **Implied volatility :** the premium depends on how much the asset's price is expected to move. The premium alone doesn’t show the volatility built into it; this program recovers it from the contract’s terms.
 
-**Black–Scholes** it's a model that prices a European call without trying to predict where the stock will go. It assumes money has a time value (a dollar received at expiration is worth less than a dollar today, so future amounts are discounted at the risk-free rate) and that the stock grows on average at that same risk-free rate. The price is the average payoff over all the possible price paths, discounted back to today. The only unknown input is the volatility, which is what this program solves for.
+**Black–Scholes** is a model that prices a European call without trying to predict where the stock will go. It assumes money has a time value (a dollar received at expiration is worth less than a dollar today, so future amounts are discounted at the risk-free rate) and that the stock grows on average at that same risk-free rate. The price is the average payoff over all the possible price paths, discounted back to today. The only unknown input is the volatility, which is what this program solves for.
 
 ## Use case
 
 You want to buy a European call option, but the quoted premium doesn't tell you what volatility is built into the price. Enter the contract's spot price, strike, premium, risk-free rate and time to expiry, and the program estimates the volatility that price implies under Black–Scholes. You can then judge whether the contract looks expensive or cheap, for example by comparing the result with how volatile the asset has actually been.
 
 # Motivation
-While studying about the "Black-Scholes" model ([**Personal study papers on "Black-Scholes" model and Monte Carlo Simulation, wrote in Romanian**](https://github.com/kantorarthur/Monte_Carlo_Black_Scholes_Study_Papers)) used in pricing European call contracts I realized that when you buy a call option, the price you pay implies a level of volatility, but that figure is rarely shown to you.
+While studying the "Black-Scholes" model ([**Personal study papers on "Black-Scholes" model and Monte Carlo Simulation, written in Romanian**](https://github.com/kantorarthur/Monte_Carlo_Black_Scholes_Study_Papers)) used in pricing European call contracts I realized that when you buy a call option, the price you pay implies a level of volatility, but that figure is rarely shown to you.
 
-So I though about making this tool that estimates it from the contract’s spot price, strike, price, risk-free rate and time to expiry, so you can see what volatility the market price implies under the Black–Scholes model and decide if you want to move further with the contract.
+So I thought about making this tool that estimates it from the contract’s spot price, strike, option price, risk-free rate and time to expiry, so you can see what volatility the market price implies under the Black–Scholes model and decide if you want to move further with the contract.
 ## How it works
 
 1. Sweep volatility from `0.05` to `0.40` in steps of `0.05`.
@@ -31,13 +31,13 @@ So I though about making this tool that estimates it from the contract’s spot 
 
 Each estimate uses 10 threads with 100,000 simulations per thread (1,000,000 paths in total). Every tested volatility and its estimated price is written to `prices.csv`, and if a volatility is found, `plot.py` plots call price against volatility.
 
-At the end of the program a plot will show up that shows the comparations made by the program vs. the actual contract numbers.
+At the end of the program a plot will show up that shows the comparisons made by the program vs. the actual contract numbers.
 
 <img width="635" height="521" alt="Image" src="https://github.com/user-attachments/assets/df6fd0eb-a7bd-4345-8a3c-e0838aef0d5e" />
 
 **Inputs used for this plot: Spot Price - 100, Strike Price - 100, Call Option Price - 10.45, Risk-Free Rate - 0.05, Time to expiry - 1**
 
-Based on this example plot we can see that our program began to search for the volatility factor starting from 0.05, increased until he found a volatility factor greater than the actual one and began decreasing with 0.01 until he got to the actual volatility factor that was used in the contract.
+Based on this example plot we can see that our program began to search for the volatility factor starting from 0.05, increased until it found a volatility factor greater than the actual one and began decreasing with 0.01 until it got to the actual volatility factor that was used in the contract.
 
 ## Requirements
 
@@ -134,11 +134,11 @@ Higher volatility makes the call more valuable (the payoff is capped below at ze
 
 <img width="785" height="622" alt="Image" src="https://github.com/user-attachments/assets/887669e3-b1ed-490e-b79c-8be60dca9267" />
 
-1. The loop starts using an arbitrary volatility factor of 0.05 and it increases up until 0.40 if the actual volatility factor wasn't found until yet.
+1. The loop starts using an arbitrary volatility factor of 0.05 and it increases up until 0.40 if the actual volatility factor hasn’t been found yet.
 
 2. The second loop starts (number_of_threads) threads. Thread i calls simulate with its own seed (42 + i) and writes its payoff sum into its own slot, payoff_sums[i]. The lambda captures everything by reference, except i, which is copied so each thread keeps its own value. Since every thread writes to a different array element, there is no data race.
 
-3. After each thread finished his work, we compute the average_payoff using the arithmetic median on the sum of payoffs computed by each thread.
+3. After each thread finished his work, we compute the average_payoff using the mean on the sum of payoffs computed by each thread.
 
 **(3) - Loop after finding the first volatility factor greater than the actual volatility factor we are looking for**
 
@@ -170,7 +170,7 @@ This trivial implementation was used only for the benchmarks, which showed worse
 I measured wall-clock runtime with `benchmark.py`, which launches the executable 30 times per configuration with randomized inputs and records the mean.
 
 I also benchmarked the program using a trivial implementation of "core pinning" technique, but I found it as being worse in terms of runtime. 
-The best results I got was using 10 threads without core pinning. 
+The best results I got were using 10 threads without core pinning. 
 
 The median for estimating the volatility factor for 30 contracts using 10 threads without core pinning was 0.037 seconds/contract.
 
